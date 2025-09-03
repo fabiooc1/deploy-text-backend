@@ -1,0 +1,11 @@
+services:
+ postgres-server:
+  image: postgres:latest
+  enviroment:
+    POSTGRES_DB: deploy_text_db
+    POSTGRES_USER: backend
+    POSTGRES_PASSWORD: dev
+  ports:
+    - "5432:5432"
+  volumes:
+    - db_data:/var/lib/postgresql/data
